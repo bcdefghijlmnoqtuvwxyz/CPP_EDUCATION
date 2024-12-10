@@ -4,14 +4,16 @@ using namespace std;
 
 int main() {
 
-    int my_array[] = {23 ,38, 56, 69, 78};
+    int nData = 10;
 
-    char my_str[] = {'h', 'e', 'l', 'l', 'o'};
+    int &ref = nData; // 변수에 대한 참조자 선언
 
-    char *ptr = my_str; // 1번째 배열의 값인 h가 포인터 주소가 됨
+    ref = 20; // 참조자 값을 변경하면 원본도 변경됨
+    cout << nData << endl;
 
-    cout << *(ptr + 3) << endl; // l이 출력됨
-    cout << ptr[3] << endl; // 같은 의미
+    int *pnData = &nData; // 포인터를 쓰는 것과 비슷함
+    *pnData = 30;
+    cout << nData << endl;
 
     return 0;
 }
