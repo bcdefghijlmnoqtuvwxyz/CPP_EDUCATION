@@ -2,34 +2,29 @@
 
 using namespace std; 
 
-const int kMaxStr = 100; 
-
-bool IsEqual(const char *str1, const char *str2) {
-    for (int i = 0; i < kMaxStr; i++) {
-        if(str1[i] != str2[i]) return false;
-        if(str1[i] == '\0') return true;
-    }
-
-    return true;
+int Add(int a, int b, int c)
+{
+    cout << "Add(int, int, int): ";
+    return a + b + c;
 }
 
-int main() {
+int Add(int a, int b)
+{
+    cout << "Add(int, int): ";
+    return a + b;
+}
 
-    const char str1[kMaxStr] = "stop";
+double Add(double a, double b)
+{
+    cout << "Add(double, double): ";
+    return a + b;
+}
 
-    while (1)
-    {
-        char str2[kMaxStr];
-        cin >> str2 >> endl;
+int main()
+{
+    cout << Add(3, 4) << endl;
+    cout << Add(3, 4, 5) << endl;
+    cout << Add(3.3, 4.4) << endl;
 
-        if(IsEqual(str1, str2)) {
-            cout << "종료" << endl;
-            break;
-        }
-        else {
-            cout << "계속" << endl;
-        }
-    }
     return 0;
 }
-
