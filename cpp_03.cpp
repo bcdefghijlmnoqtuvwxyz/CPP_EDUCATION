@@ -1,19 +1,15 @@
+#include <string>
 #include <iostream> 
 
-using namespace std; 
-
 int main() {
+    std::string strData = "Test string";
+    std::cout << "Sample string" << std::endl;
+    std::cout << strData << std::endl;
 
-    char user_input[100];
+    strData = "New string";
+    std::cout << strData << std::endl;
 
-    cout << "원하는 문장을 입력해주세요." << endl;
-    cout << "입력: ";
-
-    //cin >> user_input; // 입력을 할 때 빈 칸 이후의 단어는 생략함 
-
-    cin.getline(user_input, sizeof(user_input)); // 빈 칸 이후의 단어도 그대로 출력함
-
-    cout << "메아리: " << user_input << endl;
+    std::cout << "저는 " << 20 << "살" << "입니다." << std::endl;
 
     return 0;
 }
