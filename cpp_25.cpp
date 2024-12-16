@@ -10,7 +10,7 @@ public:
 
     int GetData() const // 상수형 메서드 선언 및 정의
     {
-        SetData(20); // 사용 불가
+        // SetData(20); // 사용 불가
 
         return m_nData; // 멤버 변수의 값을 읽을 수는 있지만 쓸 수는 없음
     }
